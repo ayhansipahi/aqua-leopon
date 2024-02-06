@@ -70,16 +70,27 @@
         "export": "ClearHeadersOutboundPolicy",
         "module": "$import(@zuplo/runtime)",
         "options": {
-          "exclude": [
-            "zp-rid",
-            "Server",
-            "CF-RAY",
-            "alt-svc"
-          ]
+          "exclude": []
         }
       },
       "name": "clear-headers-outbound",
       "policyType": "clear-headers-outbound"
+    },
+    {
+      "handler": {
+        "export": "SetHeadersOutboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "headers": [
+            {
+              "name": "Hello",
+              "value": "World!"
+            }
+          ]
+        }
+      },
+      "name": "set-headers-outbound",
+      "policyType": "set-headers-outbound"
     }
   ]
 }
