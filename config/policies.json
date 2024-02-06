@@ -71,8 +71,10 @@
         "module": "$import(@zuplo/runtime)",
         "options": {
           "exclude": [
-            "my-header",
-            "aws-request-id"
+            "zp-rid",
+            "Server",
+            "CF-RAY",
+            "alt-svc"
           ]
         }
       },
